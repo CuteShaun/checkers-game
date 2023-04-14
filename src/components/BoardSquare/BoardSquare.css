@@ -1,0 +1,21 @@
+.checkers-board .board-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-red);
+    border: 3px solid var(--main-golden);
+  }
+  
+  .checkers-board .board-square.dark {
+    background-color: var(--board-square-light);
+  }
+  
+  .checkers-board .board-square.highlighted {
+    background-color: var(--main-green);
+  }
+  
+  .checkers-board .board-square.light.highlighted {
+    background-color: var(--main-green);
+  }

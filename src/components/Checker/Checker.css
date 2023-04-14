@@ -1,0 +1,19 @@
+.checker {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+.checker.player1 {
+    background-color: var(--primary-red);
+}
+
+.checker.player2 {
+    background-color: var(--default-black);
+}
+
+.checker.selected {
+    transform: scale(1.2);
+}
