@@ -6,5 +6,3 @@ export const Checker = ({ player, isKing, isSelected, onDragStart }) => {
 
     return <div className={className} draggable={true} onDragStart={onDragStart} />;
 };
-
-export default Checker;
