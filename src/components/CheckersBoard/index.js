@@ -31,7 +31,7 @@ export const CheckersBoard = () => {
     const intervalId = useRef();
 
     const stopGameTime = useCallback(() => {
-        clearInterval(intervalId);
+        clearInterval(intervalId.current);
     }, []);
 
     useEffect(() => {
@@ -150,45 +150,33 @@ export const CheckersBoard = () => {
     };
 
     return (
-        <>
-            <div className="checkers-wrapper">
-                <div className="game-panel">
-                    <>
-                        <GameStats
-                            gameDuration={gameDuration}
-                            numberOfMoves={numberOfMoves}
-                            currentPlayer={currentPlayer}
-                        />
-                        <Button
-                            className="undo-button"
-                            onClick={handleUndoMove}
-                            text="Undo move"
-                            disabled={moveHistory.length === 0}
-                        />
-                        <Button
-                            className="reset-button"
-                            onClick={handleResetGame}
-                            text="Reset game"
-                        />
-                    </>
-                    <div className="game-status">
-                        <GameOverBanner player={winner} winner={winner} />
-                    </div>
-                </div>
-                <div className="checkers-game">
-                    <>
-                        <div>
-                            <div className="checkers-board">
-                                {Array.from({ length: 8 }, (_, y) =>
-                                    Array.from({ length: 8 }, (_, x) => renderSquare(x, y))
-                                )}
-                            </div>
-                            <span className="checkers-board__pseudo"></span>
-                        </div>
-                    </>
+        <div className="checkers-wrapper">
+            <div className="game-panel">
+                <GameStats
+                    gameDuration={gameDuration}
+                    numberOfMoves={numberOfMoves}
+                    currentPlayer={currentPlayer}
+                />
+                <Button
+                    className="undo-button"
+                    onClick={handleUndoMove}
+                    text="Undo move"
+                    disabled={moveHistory.length === 0}
+                />
+                <Button className="reset-button" onClick={handleResetGame} text="Reset game" />
+                <div className="game-status">
+                    <GameOverBanner player={winner} winner={winner} />
                 </div>
             </div>
-        </>
+            <div className="checkers-game">
+                <div className="checkers-board">
+                    {Array.from({ length: 8 }, (_, y) =>
+                        Array.from({ length: 8 }, (_, x) => renderSquare(x, y))
+                    )}
+                </div>
+                <span className="checkers-board__pseudo"></span>
+            </div>
+        </div>
     );
 };
 
