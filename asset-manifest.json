@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/checkers-game/static/css/main.fb12930c.css",
-    "main.js": "/checkers-game/static/js/main.764ccf97.js",
+    "main.js": "/checkers-game/static/js/main.71d3b169.js",
     "static/media/table.jpeg": "/checkers-game/static/media/table.89465e7b357cbcba1f5a.jpeg",
     "index.html": "/checkers-game/index.html",
     "main.fb12930c.css.map": "/checkers-game/static/css/main.fb12930c.css.map",
-    "main.764ccf97.js.map": "/checkers-game/static/js/main.764ccf97.js.map"
+    "main.71d3b169.js.map": "/checkers-game/static/js/main.71d3b169.js.map"
   },
   "entrypoints": [
     "static/css/main.fb12930c.css",
-    "static/js/main.764ccf97.js"
+    "static/js/main.71d3b169.js"
   ]
 }
