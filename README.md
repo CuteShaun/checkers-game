@@ -1,10 +1,9 @@
 # Getting started with Retro Checkers Game!
 
+Project deployed on gh-pages: ![link](https://cuteshaun.github.io/checkers-game/)
+
 In the project directory, you can run:
 `npm install` then `npm run start`
-
-Unfortunately I can't deploy project on gh-pages with free github version,
-it's available only for pro
 
 ## Main rules
 
